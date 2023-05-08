@@ -1,25 +1,179 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Mi página web</title>
+	<title>Mi portafolio personal</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
-		body {
-			background-color: lightblue;
-		}
-		
-		h1 {
-			color: white;
-			text-align: center;
-		}
-		
-		p {
-			font-family: verdana;
-			font-size: 20px;
-		}
+        /* Estilo para el cuerpo de la página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #4682B4;
+            color: #333;
+            margin: 0;
+        }
+
+        /* Estilo para el encabezado */
+        header {
+            background-color: #A2D1EF;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilo para el título */
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        /* Estilo para la sección "Sobre mí" */
+        #sobre-mi {
+            background-color: #87CEFA;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0px 0px 10px rgba(184, 181, 181, 0.1);
+        }
+
+        /* Estilo para el título de la sección "Sobre mí" */
+        #sobre-mi h2 {
+            margin-top: 0;
+            font-size: 24px;
+        }
+        #sobre-mi img{
+            width: 150px; /*Ancho de la Imagen*/
+            height: 150px; /* Largo de la Imagen*/
+            border-radius: 50%; /*Agrega bordes redondeados a la imagen*/
+
+
+        }
+
+        /* Estilo para la sección "Habilidades" */
+        #habilidades {
+            background-color: #87CEFA;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilo para el título de la sección "Habilidades" */
+        #habilidades h2 {
+            margin-top: 0;
+            font-size: 24px;
+        }
+
+        /* Estilo para la lista de habilidades */
+        #habilidades ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilo para los elementos de la lista de habilidades */
+        #habilidades li {
+            display: inline-block;
+            margin-right: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Estilo para la sección "Proyectos" */
+        #proyectos {
+            background-color: #87CEFA;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilo para el título de la sección "Proyectos" */
+        #proyectos h2 {
+            margin-top: 0;
+            font-size: 24px;
+        }
+
+        /* Estilo para los proyectos */
+        .proyecto {
+            margin-bottom: 20px;
+        }
+
+        /* Estilo para la imagen del proyecto */
+        .proyecto img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Estilo para el título del proyecto */
+        .proyecto h3 {
+            margin-top: 0;
+            font-size: 20px;
+        }
+
+        /* Estilo para la descripción del proyecto */
+        .proyecto p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
 	</style>
 </head>
 <body>
-	<h1>Bienvenidos a mi pagina web</h1>
-	<p>Esta es una pagina de ejemplo que muestra como se puede aplicar CSS a HTML.</p>
+    <header>
+		<h1>Edgar Montoya</h1>
+		<nav>
+			<ul>
+				<li><a href="#sobre-mi">Sobre mí</a></li>
+				<li><a href="#proyectos">Proyectos</a></li>
+				<li><a href="#habilidades">Habilidades</a></li>
+				<li><a href="#contacto">Contacto</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<main>
+		<section id="sobre-mi">
+			<img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Texto alternativo de la imagen">
+            <h2>Sobre mí</h2>
+			<p>Desarrollador de software apasionado por crear soluciones innovadoras. Experto en Python y C++. Colaborador efectivo y resuelve problemas con creatividad.</p>
+		</section>
+
+		<section id="proyectos">
+			<h2>Proyectos</h2>
+			<ul>
+				<li><a href="#">Proyecto 1</a></li>
+				<li><a href="#">Proyecto 2</a></li>
+				<li><a href="#">Proyecto 3</a></li>
+			</ul>
+		</section>
+
+		<section id="habilidades">
+			<h2>Habilidades</h2>
+			<ul>
+				<li>Python</li>
+				<li>C++</li>
+				<li>JavaScript</li>
+				<li>MySQL</li>
+				<li>Desarrollo Ágil</li>
+			</ul>
+		</section>
+
+		<section id="contacto">
+			<h2>Contacto</h2>
+			<form>
+				<label for="nombre">Nombre:</label>
+				<input type="text" id="nombre" name="nombre"><br><br>
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email"><br><br>
+				<label for="mensaje">Mensaje:</label><br>
+				<textarea id="mensaje" name="mensaje"></textarea><br><br>
+				<input type="submit" value="Enviar">
+			</form>
+		</section>
+	</main>
+
+	<footer>
+		<p>Derechos Reservados &copy; 2023 Nombre Apellido</p>
+	</footer>
 </body>
 </html>
+
+
